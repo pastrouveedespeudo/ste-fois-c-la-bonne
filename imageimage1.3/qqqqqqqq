@@ -1,0 +1,39 @@
+                print(self.liste2[c], j)
+                if self.liste2[c] == j:
+                    print("oui")
+                c+=1
+
+
+
+        try:
+            for i in range(self.compteur + 1):
+                for i in self.liste_main:
+                    for j in i :
+
+                        if self.liste_traitement[c][0] == j:
+                            print(self.liste_traitement[c][0], j)
+                            if j in self.liste_main[0]:
+                
+                                outils_image.image_position_dg(self, self.liste_image[1], self.liste_image[0],
+                                            0,0,0, self.liste_image2)
+                                
+                            elif j in self.liste_direction[1]:
+                 
+                                outils_image.image_position_dg(self, self.liste_image[0], self.liste_image[1],
+                                            0,0,0, self.liste_image2)
+                                
+                            elif j in self.liste_direction[2]:
+                      
+                                outils_image.image_position_haut_bas(self,self.liste_image[1], self.liste_image[0],
+                                               self.liste_image2)
+
+                            elif j in self.liste_direction[3]:
+                        
+                                outils_image.image_position_haut_bas(self,self.liste_image[0], self.liste_image[1],
+                                               self.liste_image2)
+                            else:
+                                print("no matches bitches")
+                                
+                c+=1
+        except:
+            pass
